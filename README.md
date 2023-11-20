@@ -1,5 +1,5 @@
-<!--<p align="center"><a href="https://github.com/AngadBasandrai/boids-simulation" target="_blank"><img src="Resources/banner.png" width=240 title="Boids Simulation" alt="Boids Simulation"></a>
-</p>-->
+<p align="center"><a href="https://github.com/AngadBasandrai/chroma-nova" target="_blank"><img src="Resources/banner/banner.png" width=240 title="Chroma Nova" alt="Chroma Nova"></a>
+</p>
 
 <h1 align="center"> &nbsp;&nbsp;Chroma Nova </h1>
 <br/>
