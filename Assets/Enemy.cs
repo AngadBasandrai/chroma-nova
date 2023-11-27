@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    public int cannons;
+    public Vector3[] cannonPos;
     public GameObject bullet;
     public int speed = 100;
     public bool shoot = true;
@@ -59,7 +60,6 @@ public class Enemy : MonoBehaviour
         }
         if (boss)
         {
-            BossSpawner.instance.bloodCloud.SetActive(true);
             BossSpawner.instance.bloomer.SetActive(true);
         }
     }
@@ -137,13 +137,8 @@ public class Enemy : MonoBehaviour
                         FindObjectOfType<Robot>().shield += bossBonusAmt[i];
                         Mathf.Clamp(FindObjectOfType<Robot>().shield, 0, 375);
                     }
-                    BossSpawner.instance.bloodCloud.SetActive(false);
                     BossSpawner.instance.bloomer.SetActive(false);
 
-                    if (Random.value <= 0.01f)
-                    {
-                        GameObject.Find("Robot").GetComponent<Robot>().ChangeHead(gameObject);
-                    }
                     Destroy(gameObject);
                 }
             }
@@ -183,7 +178,7 @@ public class Enemy : MonoBehaviour
         bossCanShoot = false;
         for (int i = 0; i < bossShoot.Count; i++)
         {
-            GameObject b = Instantiate(bullet, transform.position + -Vector3.right + bossShoot[i], Quaternion.identity);
+            GameObject b = Instantiate(bullet, transform.position + -Vector3.right + cannonPos[Random.Range(0,cannons-1)] + bossShoot[i], Quaternion.identity);
             b.GetComponent<Bullet>().dmg = bossDmg;
             b.GetComponent<Bullet>().opp = true;
         }

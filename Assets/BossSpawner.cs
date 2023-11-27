@@ -18,17 +18,8 @@ public class BossSpawner : MonoBehaviour
     {
         bosses = permBosses;
         scores = permScores;
-        if (instance)
-        {
-            if (instance != this)
-            {
-                Destroy(this);
-            }
-        }
-        else
-        {
-            instance = this;
-        }
+
+        instance = this;
     }
 
     // Update is called once per frame
@@ -40,7 +31,7 @@ public class BossSpawner : MonoBehaviour
             {
                 ls = scores[0];
                 scores.RemoveAt(0);
-                Instantiate(bosses[0], new Vector3(7, 0, 0), bosses[0].transform.rotation);
+                Instantiate(bosses[0], new Vector3(6.5f, 0, 0), bosses[0].transform.rotation);
                 bosses.RemoveAt(0);
             }
         }

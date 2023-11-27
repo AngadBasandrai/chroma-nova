@@ -12,7 +12,6 @@ public class Powerup : MonoBehaviour
         AmmoType,
         AmmoType2,
         AmmoType3,
-        AmmoType4,
         SlowMo
     }
     public PowerUpType type;
@@ -56,10 +55,6 @@ public class Powerup : MonoBehaviour
             else if (type == PowerUpType.AmmoType3)
             {
                 coll.GetComponent<Robot>().ChangeAmmo3();
-            }
-            else if (type == PowerUpType.AmmoType4)
-            {
-                coll.GetComponent<Robot>().ChangeAmmo4();
             }
             else if (type == PowerUpType.SlowMo)
             {

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 02811814af4b9de4aad6c22a1a41cfd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a461615a512a8e2468ac2ca431033ac7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,6 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0
+  dmgFalloff: 0
+  minFallOff: 0
+  fallOffSpeed: 0
   opp: 0
   boom: 1
   explosion: {fileID: 1659159102406596127, guid: 50a95bbf232ae4447b743e1898dcfe34,
@@ -125,6 +128,10 @@ MonoBehaviour:
   speedMul: 1
   homing: 0
   dmgPop: {fileID: 1086260041910012852, guid: 8bf8486590aa86c43b6bdf0a6e7066bd, type: 3}
+  des: 1
+  shock: 0
+  timeS: 0
+  armorBreak: 0
 --- !u!70 &7160086385487351217
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

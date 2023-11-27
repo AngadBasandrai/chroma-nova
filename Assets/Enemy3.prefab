@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6896394689141849864}
   - component: {fileID: 6896394689141849975}
-  - component: {fileID: 6896394689141849974}
   - component: {fileID: 6896394689141849973}
   - component: {fileID: 6896394689141849972}
   - component: {fileID: 6896394689141849865}
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 0590c27f91058ee47adc5a2ddca6aa81, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bea544329966aa147972fa57148f11c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,25 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6896394689141849974
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896394689141849971}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2af05eafdcb44774cb7cca994f04d695, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &6896394689141849973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03125, y: 0.46875}
+    oldSize: {x: 1.1866666, y: 1.2133334}
     newSize: {x: 1.03125, y: 0.46875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -163,9 +143,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e9d3051ed793d4dbecaf6ea5069512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannons: 2
+  cannonPos:
+  - {x: 0, y: 0.2, z: 0}
+  - {x: 0, y: -0.2, z: 0}
   bullet: {fileID: 3129625727377344796, guid: 316b48126575cc44fa5aea592f52f5ce, type: 3}
   speed: 35
   shoot: 1
   damage: 80
   fireRate: 2
   health: 100
+  boss: 0
+  bossBullets: 0
+  bossShoot: []
+  bossSmallGuys: []
+  bossSmallGuysPos: []
+  bossSpeed: 0
+  bossFireRate: 0
+  bossHealth: 0
+  bossMaxHealth: 0
+  bossDmg: 0
+  bossSpawnTime: 5
+  bossBonusAmt: 
+  bossSpecAttTime: []
+  bossSpecAtt: []
+  lz: {fileID: 0}
+  ab: {fileID: 0}
+  shocked: 0
+  score: 5

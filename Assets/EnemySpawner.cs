@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     void Spawn()
     {
         int z = Random.Range(0, enemies.Count);
-        Instantiate(enemies[z], new Vector3(9.5f, Random.Range(4, -4)), enemies[z].transform.rotation);
+        Instantiate(enemies[z], new Vector3(9.5f, Random.Range(3.7f, -3.7f)), enemies[z].transform.rotation);
         spawnTime -= spawnTime >= minSpawnTime ? 0.02f : 0;
         CancelInvoke("Spawn");
         Invoke("Spawn", spawnTime);

@@ -61,14 +61,6 @@ public class Robot : MonoBehaviour
             gunShock.SetActive(false);
             rb.AddForce(Vector3.up * Time.deltaTime * 500 * Input.GetAxisRaw("Vertical") * ((UniversalTime.timeScale + 1) / 2));
             rb.gravityScale = UniversalTime.timeScale / 2;
-            if (Input.GetAxisRaw("Vertical") != 0)
-            {
-                GetComponent<Animator>().SetBool("Fly", true);
-            }
-            else
-            {
-                GetComponent<Animator>().SetBool("Fly", false);
-            }
             if (Input.GetKeyDown(KeyCode.Space) && shoot)
             {
                 if (rockets > 0)
@@ -95,7 +87,6 @@ public class Robot : MonoBehaviour
 
     IEnumerator FireAgain()
     {
-        GetComponent<Animator>().SetBool("Fire", true);
         shoot = false;
         yield return new WaitForSeconds(0.05f);
         if (bullet != Bullet5)
@@ -114,7 +105,6 @@ public class Robot : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(0.025f);
-        GetComponent<Animator>().SetBool("Fire", false);
         yield return new WaitForSeconds(0.025f);
         shoot = true;
     }
@@ -157,13 +147,6 @@ public class Robot : MonoBehaviour
     }
 
     public void ChangeAmmo3()
-    {
-        bullet = Bullet4;
-        damage = 10;
-        rockets = 2;
-    }
-
-    public void ChangeAmmo4()
     {
         bullet = Bullet5;
         damage = 75 + (totDmgBns/5);

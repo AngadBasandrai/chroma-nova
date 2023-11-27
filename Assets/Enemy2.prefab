@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8001402301376492850}
   - component: {fileID: 8001402301376492860}
   - component: {fileID: 8001402301376492863}
-  - component: {fileID: 8001402301376492862}
   - component: {fileID: 6280641106988459533}
   m_Layer: 0
   m_Name: Enemy2
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: b4d5cffaa02a4cf4093bb742c9a4de19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43fef0d938e91ed46806b3e5b872d364, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +97,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.5, y: 0.6}
+  m_Offset: {x: 0.0000000010463358, y: 0.008777302}
+  m_Size: {x: 1.9969034, y: 1.6019583}
   m_Direction: 1
 --- !u!50 &8001402301376492863
 Rigidbody2D:
@@ -122,25 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!95 &8001402301376492862
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001402301376492851}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6101be88ff4db0349844ac775d7932ac, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6280641106988459533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e9d3051ed793d4dbecaf6ea5069512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannons: 0
+  cannonPos:
+  - {x: 0, y: 0, z: 0}
   bullet: {fileID: 3129625727377344796, guid: b430913b6d3e1ce428764a0846eaeaf2, type: 3}
   speed: 100
   shoot: 1
@@ -174,4 +157,6 @@ MonoBehaviour:
   bossSpecAttTime: []
   bossSpecAtt: []
   lz: {fileID: 0}
+  ab: {fileID: 0}
   shocked: 0
+  score: 5
